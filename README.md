@@ -2,7 +2,7 @@
 
 The purpose of this interview exercise is to assess your ability to create a data pipeline from scratch.
 
-Your goal is to retrieve a dataset, process it, then saving output into different storages.
+Your goal is to retrieve some datasets, process them, then saving output into different type of storages.
 
 We provide in this exercise a docker-compose which will allow you to deploy different services :
 - mongodb instance (noSQL database)
@@ -34,12 +34,14 @@ docker-compose up --build -d
 
 # Exercise
 
-Etalab team is exporting regurlarly (every week) the complete list of datasets or organizations hosted in data.gouv.fr. Data is available here: https://www.data.gouv.fr/fr/datasets/catalogue-des-donnees-de-data-gouv-fr/
+Etalab team is exporting regularly (every week) the complete list of datasets or organizations hosted in data.gouv.fr. Data is available here: https://www.data.gouv.fr/fr/datasets/catalogue-des-donnees-de-data-gouv-fr/
 
-From these data, you will build a data pipeline which will run every day at 5PM and will perform:
+From these data, you will build a data pipeline which will is scheduled every wednesday at 5PM and will perform:
 1) Recuperation of the list of every dataset in data.gouv.fr
-2) Filter list of dataset and keep only those for which the term "mobilité" or "transport" is present
+2) Filter this list and keep only those for which the term "mobilité" or "transport" is present
 3) Export this list on csv format into a minio bucket called 'datagouv' and in a folder named with actual date (YYYY-MM-DD)
 4) Filter this list by the popularity of a data producer organization keeping only datasets from TOP 30 organization (you will need the organization list available in https://www.data.gouv.fr/fr/datasets/catalogue-des-donnees-de-data-gouv-fr/ and use the column 'metric.followers' in this csv)
 5) Keep only most relevant fields (dataset_id, dataset title, dataset followers, organization, organization_id, organization followers).
-6) Export this list into a mongo document in a database called 'datagouv' and collection called 'tops'
+6) Export this list into a mongo document in a database called 'datagouv' and a collection called 'tops'
+
+If you're stuck on something, please reach out to us.
