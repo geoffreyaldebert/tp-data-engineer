@@ -5,9 +5,9 @@ The purpose of this interview exercise is to assess your ability to create a dat
 Your goal is to retrieve some datasets, process them, then saving output into different type of storages.
 
 We provide in this exercise a docker-compose which will allow you to deploy different services :
-- mongodb instance (noSQL database)
-- minio instance (storage service compatible with S3)
-- airflow instance (tool for data engineering pipelines - user : airflow ; password : airflowpassword)
+- mongodb instance (noSQL database - accessible in localhost:27017)
+- minio instance (storage service compatible with S3 - accessible in localhost:9000 - user : minioadmin ; password : miniopassword)
+- airflow instance (tool for data engineering pipelines - accessible in localhost:8080 - user : airflow ; password : airflowpassword)
 - postgres instance (used uniquely for airflow)
 
 There is no need to customize docker-compose.yml, thus you will be able to focus on the data pipeline itself. We propose in this exercise Airflow for making your data engineering pipeline, because it is the tool that we use internally, but you are free to use any tool you want (open source please) if you prefer another one.
