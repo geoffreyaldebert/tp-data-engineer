@@ -1,0 +1,4 @@
+.env
+minio-data/
+mongo/
+pg-airflow/
