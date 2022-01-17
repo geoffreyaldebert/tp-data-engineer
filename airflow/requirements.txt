@@ -10,3 +10,4 @@ kaleido
 ipykernel
 nbconvert
 openpyxl
+pymongo
