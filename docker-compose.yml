@@ -15,7 +15,7 @@ services:
 
   mongodb:
     image : mongo
-    entrypoint: [ "/usr/bin/mongod" ]
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all"]
     container_name: mongodb
     volumes:
     - ./mongo/:/data/db
@@ -33,6 +33,7 @@ services:
       - .env
     ports:
       - "5432:5432"
+
   airflow:
     build:
       context: ./airflow/
