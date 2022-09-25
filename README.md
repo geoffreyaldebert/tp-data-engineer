@@ -1,5 +1,6 @@
 # Introduction
 
+
 The purpose of this interview exercise is to assess your ability to create a data pipeline from scratch.
 
 Your goal is to retrieve some datasets, process them, and then save the results to various types of storages.
